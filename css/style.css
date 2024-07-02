@@ -264,7 +264,7 @@ div.header_inner.on .search::placeholder{
 
 /*about*/
 #about{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../image/about_bg2_.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../image/about_bg.png);
     background-repeat: no-repeat;
     height: 750px;
     transition: all 5s;
