@@ -1,0 +1,481 @@
+@charset "utf-8";
+
+
+/*학교안심뜀틀 웹폰트 - 서체용*/
+@font-face {
+    font-family: 'TTHakgyoansimTtwimteulR';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimTtwimteulR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*초기설정*/
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #111;
+}
+img, video, iframe{
+    vertical-align: middle;
+}
+ul, ol{
+    list-style: none;
+}
+body{
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 15px;
+    color: #111;
+    min-width: 1450px;
+}
+
+
+
+/*header*/
+#header{
+    position: relative;
+}
+.header_inner{
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    padding: 40px 0;
+    z-index: 100;
+
+    transition: top 0.2s ease-in-out;
+}
+.header_inner .logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-60%);
+    top: 30%;
+}
+.gnb{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.gnb li a{
+    color: #20244A;
+    font-size: 20px;
+    font-weight: 500;
+}
+.menu{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+}
+.login{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+}
+.login li:first-child{
+    padding-right: 10px;
+}
+
+
+div.header_inner.on{
+	background-color: rgba(255,255,255,0.5); backdrop-filter: blur(20px);
+	position: fixed;
+    padding: 20px 0;
+}
+div.header_inner.on .gnb li a{
+    color: #111;
+}
+div.header_inner.on .logo img, div.header_inner.on .menu img, div.header_inner.on .login img{
+    display: none;
+}
+div.header_inner.on .logo{
+    background-image: url(../image/sub_logo.png);
+    background-repeat: no-repeat;
+    transform: translate(-60%, -18px);
+    width: 125px;
+    height: 64px;
+}
+div.header_inner.on .menu{
+    background-image: url(../image/sub_menu_btn.png);
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+}
+div.header_inner.on .login li:first-child{
+    background-image: url(../image/sub_login_btn.png);
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+}
+div.header_inner.on .login li:last-child a{
+    background-image: url(../image/sub_search_btn.png);
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+}
+div.header_inner.on .gnb li{
+    justify-content: space-between;
+}
+div.header_inner.on .gnb li a{
+    font-size: 17px;
+}
+.header_inner .logo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.menu a, .login a{
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+.login li:last-child{
+    display: flex;
+}
+.search{
+    outline: none;
+    background-color: rgba(255,255,255,0.6);
+    border: none;
+    border-radius: 16px;
+    padding-left: 0px;
+    width: 0;
+    transition: all 0.5s;
+}
+.search.on {
+    width: 200px;
+    padding-left: 10px;
+    margin-right: 10px;
+    
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto;
+    color: #20244A;
+}
+.search::placeholder{
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto;
+    color: #20244A;
+}
+div.header_inner.on .search::placeholder{
+    color: #20244A;
+}
+
+
+
+
+/*main_bn*/
+#main_bn{
+    height: 1335px;
+    background: rgb(148,148,220);
+    background: linear-gradient(180deg, rgba(148,148,220,1) 0%, rgba(204,182,242,1) 25%, rgba(255,218,133,1) 70%, rgba(255,172,64,1) 100%);
+    position: relative;
+}
+#main_bn>img{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.line{
+    border-bottom: 1px solid #707070;
+    width: 68%;
+    position: absolute;
+    top: 760px;
+    right: 0;
+}
+.main_bn_inner{
+    width: 1320px;
+    margin: 0 auto;
+    padding-top: 260px;
+    text-align: end;
+    color: #20244A;
+}
+.main_bn_inner img{
+    transform: translateY(10px);
+}
+.main_bn_inner h1{
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 55px;
+}
+.main_bn_inner p{
+    padding-top: 97px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 30px;
+}
+.main_bn_inner .more{
+    display: inline-block;
+    padding: 13px 30px;
+    border: 1px solid #20244A;
+    font-size: 17px;
+    font-weight: 500;
+    color: #20244A;
+    margin-top: 53px;
+    transition: all 0.5s;
+}
+.main_bn_inner .more:hover{
+    background-color: rgba(255,172,64,0.5);
+}
+
+/*brand_logo*/
+#brand_logo{
+    width: 1320px;
+    height: 1486px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 325px;
+    box-sizing: border-box;
+}
+.brand_logo_inner{
+    width: 911px;
+}
+#brand_logo>h1{
+    font-size: 38px;
+    font-weight: 600;
+    color: #20244A;
+}
+#brand_logo>h1 span{
+    font-weight: 900;
+}
+.brand_logo_inner .text_flex{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 13px;
+}
+.brand_logo_inner .text_flex .text>p{    
+    color: #20244A;
+    line-height: 28px;
+    font-weight: 500;
+    font-size: 17px;
+}
+.brand_logo_inner .text_flex .text .bold{
+    font-weight: 800;
+}
+.brand_logo_inner .text_flex .text .orange{
+    color: #F18E1B;
+}
+.brand_logo_inner .text_flex .text .underline{
+    text-decoration: underline;
+}
+
+
+.brand_logo_inner .color_flex{
+    margin-top: 70px;
+    margin-bottom: 113px;
+    color: #20244A;
+    font-weight: 600;
+    font-size: 17px;
+}
+.brand_logo_inner .color_flex li{
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+}
+.brand_logo_inner .color_flex li p:first-child{
+    width: 68px;
+}
+.brand_logo_inner .color_flex li p:last-child{
+    padding-left: 10px;
+}
+
+
+
+
+.brand_logo_inner .logo_flex{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    color: #20244A;
+    font-weight: 500;
+    font-size: 16px;
+}
+.brand_logo_inner .logo_flex p{
+    padding-bottom: 13px;
+    border-bottom: 1px solid #20244A;
+    margin-bottom: 40px;
+}
+.download_btn{
+    display: flex;
+    justify-content: end;
+}
+.download_btn li a{
+    display: inline-block;
+    padding: 13px 30px;
+    border: 1px solid #20244A;
+    font-size: 17px;
+    font-weight: 500;
+    color: #20244A;
+    margin-top: 90px;
+}
+.download_btn li a:last-child{
+    margin-left: 45px;
+}
+.brand_logo_inner .color_flex li:last-child p:last-child{
+    padding-left: 0;
+    font-family: 'TTHakgyoansimTtwimteulR';
+    font-weight: normal;
+}
+
+
+/*sketch*/
+#sketch {
+    padding-bottom: 100px;
+}
+#sketch .sketch_inner{
+    width: 1320px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+#sketch>.sketch_inner>h1{
+    font-size: 38px;
+    font-weight: 600;
+    color: #20244A;
+}
+
+#sketch>.sketch_inner>h1 span{
+    font-weight: 900;
+}
+
+
+
+.card img{
+    width:100%;
+}
+
+.card .swiper-slide h1{
+    padding: 10px 0 5px 30px;
+    color: #20244A;
+}
+.card .swiper-slide p{
+    padding-bottom: 20px;
+    padding-left: 30px;
+    color: #20244A;
+}
+.card .swiper-slide{
+    padding: 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+
+.card{
+    padding-bottom: 50px;
+}
+
+.card .swiper-button-prev {
+    left: -50px;
+    right: auto;
+}
+
+
+.card .swiper-slide h1, .card .swiper-slide p{
+    display: none;
+}
+
+.card .swiper-slide-active h1, .card .swiper-slide-active p{
+    display: block;
+}
+.card .swiper-slide img{
+    opacity: 0.7;
+}
+.card .swiper-slide-active img{
+    opacity: 1;
+}
+
+.swiper-button-next{
+    right: -50px;
+    left: auto;
+}
+/*지금 현재 가운데 보이고 있는 슬라이드는 .swiper-slide-active 라는 클래스를 가지는데 이를 이용해 스타일을 꾸며줌. 슬라이드가 3개일때 앞뒤로는 swiper-slide-prev, swiper-slide-next 클래스가 부여되는 이를 활용. slide개수가 4개 이상이면 모양이 제대로 잡히지 않으므로, 3개 이하일때 사용할것.*/
+.card .swiper-slide-prev{
+    transform: scale(0.9);
+    transition: all 0.5s;
+}
+.card .swiper-slide-next{
+    transform: scale(0.9);
+    transition: all 0.5s;
+}
+.card .swiper-slide-active{
+    transform: scale(1);
+    transition: all 0.5s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.sketch_pag span{
+    background-color: #20244A;
+}
+
+
+
+
+/*footer*/
+
+#footer{
+    background-color: #20244A;
+}
+.footer_inner{
+    width: 1320px;
+    height: 257px;
+    margin: 0 auto;
+    padding: 35px 0;
+    box-sizing: border-box;
+
+    display: flex;
+
+    color: #fff;
+}
+.footer_logo h5{
+    font-size: 16px;
+    font-weight: 500;
+}
+.footer_logo h4{
+    font-size: 22px;
+    font-weight: 800;
+}
+.footer_text{
+    padding-left: 207px;
+    padding-top: 17px;
+}
+.footer_text p{
+    line-height: 27px;
+}
+.footer_text p span{    
+    padding-right: 10px;
+}
+.footer_text p span.bold{
+    padding-right: 18px;
+    line-height: 27px;
+    font-weight: 800;
+}
+.footer_text ul{
+    display: flex;
+    width: 132px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 23px;
+}
+
+
+.top_btn{
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    z-index: 101;
+    transition:all 0.5s;
+}
+.popup{
+    position: fixed;
+    bottom: 120px;
+    right: 40px;
+    z-index: 101;
+    transition:all 0.5s;
+}
+.top_btn:hover, .popup:hover{
+    transform:translateY(-5px);
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.3));
+}
