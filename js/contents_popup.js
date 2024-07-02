@@ -27,6 +27,6 @@ $(function(){
     $(".close").click(function(){
         $(".archive_popup").fadeOut();
         /*서서히 사라지게 하고 싶으면 fadeOut(), 그냥 사라지게 하고 싶으면 hide()를 써준다.*/
-        $('.archive_popup').off('scroll touchmove mousewheel');
+        $('.archive_popup').on('scroll touchmove mousewheel');
     });
 });
