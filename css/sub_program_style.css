@@ -221,7 +221,8 @@ div.header_inner.on .search::placeholder{
 /*program_1*/
 #program_1{
     padding-top: 114px;
-    height: 398px;
+    height: 512px;
+
     background-image: url(../image/sub_program/main_bg_.png);
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -230,6 +231,9 @@ div.header_inner.on .search::placeholder{
     margin: 0 auto;
     display: flex;
     justify-content: end;
+
+    padding-left: 30px;
+    box-sizing: border-box;
 }
 #program_1 ul{
     box-sizing: border-box;
@@ -263,7 +267,7 @@ div.header_inner.on .search::placeholder{
 
 #program_1 li.text{
     width: calc(100% - 611px);
-    padding-left: 50px;
+    padding-left: 80px;
     padding-right: 50px;
     padding-top: 41px;
     font-size: 18px;
@@ -392,11 +396,16 @@ div.header_inner.on .search::placeholder{
 #program_4{
     max-width: 1920px;
     margin: 0 auto;
+
     padding-top: 190px;
-    height: 398px;
+    height: 588px;
+
     background-image: url(../image/sub_program/main_bg_4.png);
     background-repeat: no-repeat;
     background-position: left bottom;
+
+    padding-left: 30px;
+    box-sizing: border-box;
 }
 #program_4 ul{
     display: flex;
