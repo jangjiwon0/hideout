@@ -816,14 +816,53 @@ div.header_inner.on .search::placeholder{
     z-index: 101;
     transition:all 0.5s;
 }
-.popup{
+.popup_btn{
     position: fixed;
     bottom: 120px;
     right: 40px;
     z-index: 101;
     transition:all 0.5s;
 }
-.top_btn:hover, .popup:hover{
+.top_btn:hover, .popup_btn:hover{
     transform:translateY(-5px);
     filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.3));
+}
+
+/*archive_popup*/
+/*여기서부터 팝업 관련 스타일 시작*/
+.popup_box{
+	position:fixed;
+	top:0px;
+	left:0px;
+	background:rgba(0,0,0,0.5); backdrop-filter: blur(10px);
+	width:100%;
+	height:100%;/*fixed되어 있기 때문에 창 기준으로 100% 높이가 됩니다.*/
+    z-index: 100;
+    display: none;
+}
+.popup_box .box_container{
+    width: 500px;
+	text-align:center;
+}
+.popup_box img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+}
+.popup_box p{
+	color:#fff;
+	font-weight: normal;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.popup_box p{
+    font-size: 15px;
+    position: absolute; /*.close의 부모인 .popup에 이미 포지션 fixed가 있어 기준이 .popup에 잡힘*/
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    color: #fff;
 }
